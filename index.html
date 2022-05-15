@@ -1,0 +1,403 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Accounting</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.css" integrity="sha512-5A8nwdMOWrSz20fDsjczgUidUBR8liPYU+WymTZP1lmY9G6Oc7HlZv156XqnsgNUzTyMefFTcsFH/tnJE/+xBg==" crossorigin="anonymous" />
+</head>
+<body style="background-image:url('background.jpg');"">
+    <h1 style="text-align: center;">Alpa Finance</h1>
+    <br><br>
+    <h3 style="text-align: center">P&L and OLI</h3>
+    <div class="container">
+  <table class="_table">
+    <thead>
+        <tr>
+            <th>Sales</th>
+            <th><input type="text" class="form_control" placeholder="Amount"></th>
+            <th><input type="text" class="form_control" placeholder="Amount"><i</th>
+            <th width="50px">
+              
+            </th>
+          </tr>
+      <tr>
+        <th>Sales Return/ Return Inwards</th>
+        <th><input type="text" class="form_control" placeholder="Amount"></th>
+        <th><input type="text" class="form_control" placeholder="Amount"></th>
+        <th width="50px">
+          <div class="action_container">
+            <button class="success" onclick="create_tr('table_body')">
+              <i class="fa fa-plus"></i>
+            </button>
+          </div>
+        </th>
+      </tr>
+    </thead>
+    <tbody id="table_body">
+      <tr>
+        <td>
+          <input type="text" class="form_control" placeholder="Description">
+        </td>
+        <td>
+          <input type="text" class="form_control" placeholder="Amount">
+        </td>
+        <td>
+            <input type="text" class="form_control" placeholder="Amount">
+        </td>
+        <td>
+          <div class="action_container">
+            <button class="danger" onclick="remove_tr(this)">
+              <i class="fa fa-close"></i>
+            </button>
+          </div>
+        </td>
+      </tr>
+      
+    </tbody>
+  </table>
+  <table class="_table">
+    <thead>
+        <tr>
+            <th style="width: 540px;">Total</th>
+            
+            <th ><input type="text" class="form_control" placeholder="Amount"><i</th>
+            <th width="60px">
+                
+              </th>
+          </tr>
+      
+    </tbody>
+  </table>
+  <br><br>
+  <h2 style="text-align: left;">Cost of Sales</h2>
+
+  <table class="_table">
+    <thead>
+        <tr>
+            <th>Purchases</th>
+            <th><input type="text" class="form_control" placeholder="Amount"></th>
+            <th><input type="text" class="form_control" placeholder="Amount"><i</th>
+            <th width="50px">
+              
+            </th>
+          </tr>
+      <tr>
+        <th>Opening Inventory</th>
+        <th><input type="text" class="form_control" placeholder="Amount"></th>
+        <th><input type="text" class="form_control" placeholder="Amount"></th>
+        <th width="50px">
+          <div class="action_container">
+            <button class="success" onclick="create_tr('table_body')">
+              <i class="fa fa-plus"></i>
+            </button>
+          </div>
+        </th>
+      </tr>
+    </thead>
+    <tbody id="table_body">
+      <tr>
+        <td>
+          <input type="text" class="form_control" placeholder="Description">
+        </td>
+        <td>
+          <input type="text" class="form_control" placeholder="Amount">
+        </td>
+        <td>
+            <input type="text" class="form_control" placeholder="Amount">
+        </td>
+        <td>
+          <div class="action_container">
+            <button class="danger" onclick="remove_tr(this)">
+              <i class="fa fa-close"></i>
+            </button>
+          </div>
+        </td>
+      </tr>
+      
+    </tbody>
+  </table>
+  <table class="_table">
+    <thead>
+        <tr>
+            <th style="width: 540px;">Total</th>
+            
+            <th ><input type="text" class="form_control" placeholder="Amount"><i</th>
+            <th width="60px">
+                
+              </th>
+          </tr>
+      
+    </tbody>
+  </table>
+  <br><br>
+  <h2 style="text-align: left;">Administrative Expense</h2>
+
+  <table class="_table">
+    <thead>
+        <tr>
+            <th>Electricity</th>
+            <th><input type="text" class="form_control" placeholder="Amount"></th>
+            <th><input type="text" class="form_control" placeholder="Amount"><i</th>
+            <th width="50px">
+              
+            </th>
+          </tr>
+      <tr>
+        <th>Water</th>
+        <th><input type="text" class="form_control" placeholder="Amount"></th>
+        <th><input type="text" class="form_control" placeholder="Amount"></th>
+        <th width="50px">
+          <div class="action_container">
+            <button class="success" onclick="create_tr('table_body')">
+              <i class="fa fa-plus"></i>
+            </button>
+          </div>
+        </th>
+      </tr>
+    </thead>
+    <tbody id="table_body">
+      <tr>
+        <td>
+          <input type="text" class="form_control" placeholder="Description">
+        </td>
+        <td>
+          <input type="text" class="form_control" placeholder="Amount">
+        </td>
+        <td>
+            <input type="text" class="form_control" placeholder="Amount">
+        </td>
+        <td>
+          <div class="action_container">
+            <button class="danger" onclick="remove_tr(this)">
+              <i class="fa fa-close"></i>
+            </button>
+          </div>
+        </td>
+      </tr>
+      
+    </tbody>
+  </table>
+  <table class="_table">
+    <thead>
+        <tr>
+            <th style="width: 540px;">Total</th>
+            
+            <th ><input type="text" class="form_control" placeholder="Amount"><i</th>
+            <th width="60px">
+                
+              </th>
+          </tr>
+      
+    </tbody>
+  </table>
+
+  <br><br>
+  <h2 style="text-align: left;">Distribution Expense</h2>
+
+  <table class="_table">
+    <thead>
+        <tr>
+            <th>Sales expenses</th>
+            <th><input type="text" class="form_control" placeholder="Amount"></th>
+            <th><input type="text" class="form_control" placeholder="Amount"><i</th>
+            <th width="50px">
+              
+            </th>
+          </tr>
+      <tr>
+        <th>Depreciation - Motor vehicle</th>
+        <th><input type="text" class="form_control" placeholder="Amount"></th>
+        <th><input type="text" class="form_control" placeholder="Amount"></th>
+        <th width="50px">
+          <div class="action_container">
+            <button class="success" onclick="create_tr('table_body')">
+              <i class="fa fa-plus"></i>
+            </button>
+          </div>
+        </th>
+      </tr>
+    </thead>
+    <tbody id="table_body">
+      <tr>
+        <td>
+          <input type="text" class="form_control" placeholder="Description">
+        </td>
+        <td>
+          <input type="text" class="form_control" placeholder="Amount">
+        </td>
+        <td>
+            <input type="text" class="form_control" placeholder="Amount">
+        </td>
+        <td>
+          <div class="action_container">
+            <button class="danger" onclick="remove_tr(this)">
+              <i class="fa fa-close"></i>
+            </button>
+          </div>
+        </td>
+      </tr>
+      
+    </tbody>
+  </table>
+  <table class="_table">
+    <thead>
+        <tr>
+            <th style="width: 540px;">Total</th>
+            
+            <th ><input type="text" class="form_control" placeholder="Amount"><i</th>
+            <th width="60px">
+                
+              </th>
+          </tr>
+      
+    </tbody>
+  </table>
+
+  <br><br>
+  <h2 style="text-align: left;">Finance Expense</h2>
+
+  <table class="_table">
+    <thead>
+        <tr>
+            <th>Bank charges</th>
+            <th><input type="text" class="form_control" placeholder="Amount"></th>
+            <th><input type="text" class="form_control" placeholder="Amount"><i</th>
+            <th width="50px">
+              
+            </th>
+          </tr>
+      <tr>
+        <th>Bank interests</th>
+        <th><input type="text" class="form_control" placeholder="Amount"></th>
+        <th><input type="text" class="form_control" placeholder="Amount"></th>
+        <th width="50px">
+          <div class="action_container">
+            <button class="success" onclick="create_tr('table_body')">
+              <i class="fa fa-plus"></i>
+            </button>
+          </div>
+        </th>
+      </tr>
+    </thead>
+    <tbody id="table_body">
+      <tr>
+        <td>
+          <input type="text" class="form_control" placeholder="Description">
+        </td>
+        <td>
+          <input type="text" class="form_control" placeholder="Amount">
+        </td>
+        <td>
+            <input type="text" class="form_control" placeholder="Amount">
+        </td>
+        <td>
+          <div class="action_container">
+            <button class="danger" onclick="remove_tr(this)">
+              <i class="fa fa-close"></i>
+            </button>
+          </div>
+        </td>
+      </tr>
+      
+    </tbody>
+  </table>
+  <table class="_table">
+    <thead>
+        <tr>
+            <th style="width: 540px;">Total</th>
+            
+            <th ><input type="text" class="form_control" placeholder="Amount"><i</th>
+            <th width="60px">
+                
+              </th>
+          </tr>
+      
+    </tbody>
+  </table>
+
+  <br><br>
+  <h2 style="text-align: left;">Other Expenses</h2>
+
+  <table class="_table">
+    <thead>
+        <th><input type="text" class="form_control" placeholder="Description"></th>
+        <th><input type="text" class="form_control" placeholder="Amount"></th>
+        <th><input type="text" class="form_control" placeholder="Amount"></th>
+        <th width="50px">
+          <div class="action_container">
+            <button class="success" onclick="create_tr('table_body')">
+              <i class="fa fa-plus"></i>
+            </button>
+          </div>
+        </th>
+      </tr>
+    </thead>
+    <tbody id="table_body">
+      <tr>
+        <td>
+          <input type="text" class="form_control" placeholder="Description">
+        </td>
+        <td>
+          <input type="text" class="form_control" placeholder="Amount">
+        </td>
+        <td>
+            <input type="text" class="form_control" placeholder="Amount">
+        </td>
+        <td>
+          <div class="action_container">
+            <button class="danger" onclick="remove_tr(this)">
+              <i class="fa fa-close"></i>
+            </button>
+          </div>
+        </td>
+      </tr>
+      
+    </tbody>
+  </table>
+  <table class="_table">
+    <thead>
+        <tr>
+            <th style="width: 540px;">Total</th>
+            
+            <th ><input type="text" class="form_control" placeholder="Amount"><i</th>
+            <th width="60px">
+                
+              </th>
+          </tr>
+      
+    </tbody>
+  </table>
+
+  <br><br>
+
+  <table class="_table">
+    <thead>
+    
+      
+    </thead>
+    <tbody id="table_body">
+      
+      
+    </tbody>
+  </table>
+  <table class="_table">
+    <thead>
+        <tr>
+            <th style="width: 540px;">Net Profit</th>
+            
+            <th ><input type="text" class="form_control" placeholder="Amount"><i</th>
+            <th width="60px">
+                
+              </th>
+          </tr>
+      
+    </tbody>
+  </table>
+  
+</div>
+    <script src="app.js"></script>
+</body>
+</html>
